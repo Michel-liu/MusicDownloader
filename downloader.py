@@ -17,7 +17,7 @@ def get_index():
                     print("文件存在，已经跳过")
                     continue
                 info[list1[0]]=list1[1]
-                print(list1)
+                # print(list1)
                 print(list1[0]+'--索引添加成功')
         return info
     except Exception:
@@ -29,7 +29,7 @@ def downloader(dict):
     try:
         for key,value in dict.items():
             response=requests.get(value[:-1],headers=headers)
-            print(value[:-1])
+            # print(value[:-1])
             print(key+':'+str(response.status_code))
             with open(FileSaveDir + key+'.mp3','wb') as f1:
                 f1.write(response.content)

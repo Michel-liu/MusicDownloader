@@ -40,24 +40,19 @@ def downloader(dict):
 
 def downloaderddirectly(dict):
     try:
-        for item in dict.items():
+        for item in dict:
             response = requests.get(item['music_url'], headers=headers)
-            print(item['title'] + ':' + str(response.status_code))
+            print(item['save_title'] + ':' + str(response.status_code))
             with open(FileSaveDir + item['save_title'] + '.mp3', 'wb') as f1:
                 f1.write(response.content)
-            print(item + '.mp3 下载成功')
+            print(item['save_title'] + '.mp3 下载成功')
     except Exception:
-        print('获取索引失败！')
-        return {}
-
+        print("Error")
 
 
 def checkFilesExist(fileName):
     return os.path.exists(FileSaveDir + fileName)
 
-def main():
-    dict=get_index()
-    downloader(dict)
-
 if __name__=='__main__':
-    main()
+    dict = get_index()
+    downloader(dict)

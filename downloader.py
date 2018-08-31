@@ -14,7 +14,7 @@ def get_index():
                 if len(list1) != 2:
                     continue
                 if checkFilesExist(list1[0]+".mp3"):
-                    print("文件存在，已经跳过")
+                    print(list1[0]+".mp3"+"文件存在，已经跳过")
                     continue
                 info[list1[0]]=list1[1]
                 print(list1)
@@ -41,6 +41,7 @@ def downloader(dict):
 def downloaderddirectly(dict):
     for item in dict:
         if checkFilesExist(item['save_title']+".mp3"):
+            print(item['save_title']+".mp3"+"文件存在，已经跳过")
             continue
         try:
             response = requests.get(item['music_url'], headers=headers)

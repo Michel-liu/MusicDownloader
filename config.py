@@ -13,3 +13,8 @@ headers={
         'Referer':'http://y.qq.com/',
         'Connection':'keep-alive'
     }
+
+formdata = {
+    'params':'2c3K2FobUFrM5zGukysRkIQ3qOpLog0v+bKbhAebzoVonBIoAbfGQk+7t3gTOR0N5lYzrY3e4c43sVQxsKFdZ7dvV9/XWMcNvZXRc/uZ8lIuzDgWfr2iIpG9pQMB++HPp+850j7uRD0zSOQ+/gFYt7CL7WPMA6dNyLnc0NbePcNaSSQo8HYhnjYpOV4IlNFIiiyBPJCBtpRDG3Gi6KWibn3ZQQclKBuuuOR7CMxIjU8=',
+    'encSecKey':'9703d1659c2a80b3a15de6225a26bd2862655c5949f864922f36e15e0a0f23b1ba0d814cc3d464342cb211a498ccc8072eccc44bbb239fb93f9ddbab979a4da27a9e3a33e7b4547b7d0870f6bd3da05939d222aefbe02eb70fe8dc000acae9ab4c9ee3fe6c26563665b0b0f2e6eab860a854deea1d7479eb30d5f5859571abf3'
+}

@@ -2,9 +2,10 @@ import requests
 from random import random
 from time import time
 import json
-import downloader
 from Down_163_list import getSongList
-from downloader import get_index,downloader
+from downloader import downloaderddirectly
+
+
 def searchanddownload():
     key_word = input("请输入你想搜索的歌曲名称：")
     l = search_song(key_word)
@@ -24,8 +25,6 @@ def download_163_music():
         add_vkey=get_vkey(song_list)
         s_u_l=get_music_url(add_vkey)
         SaveFile(s_u_l)
-        dict_1=get_index()
-        downloader(dict_1)
 
 
 
@@ -91,4 +90,4 @@ def SaveFile(song_url_list):
             item['save_title'] = item['title']+'_'+'_'.join(map(lambda x: x['name'],item['singer']))
             f.write(item['save_title']+'|'+item['music_url'])
             f.write('\n')
-    # downloader.downloaderddirectly(song_url_list)
+    downloaderddirectly(song_url_list)

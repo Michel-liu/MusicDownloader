@@ -2,20 +2,7 @@ import requests
 from random import random
 from time import time
 import json
-from pyfiglet import Figlet
 import downloader
-
-def menu():
-    f = Figlet()
-    print(f.renderText("CoolMusic"))
-    print("0. 一键下载网易云音乐我喜欢歌单")
-    print("1. 手动搜索并下载音乐")
-    cho = input("请选择你想要的操作：")
-    if cho == "0":
-        pass
-    if cho == "1":
-        searchanddownload()
-
 
 def searchanddownload():
     key_word = input("请输入你想搜索的歌曲名称：")
@@ -85,9 +72,7 @@ def get_music_url(song_list_vkey):
 def SaveFile(song_url_list):
     with open('index.txt','w+') as f:
         for item in song_url_list:
-            f.write(item['title']+'_'+'_'.join(map(lambda x: x['name'],item['singer']))+'|'+item['music_url'])
+            item['save_title'] = item['title']+'_'+'_'.join(map(lambda x: x['name'],item['singer']))
+            f.write(item['save_title']+'|'+item['music_url'])
             f.write('\n')
-
-if __name__ == '__main__':
-    menu()
-    downloader.main()
+    downloader.downloaderddirectly(song_url_list)

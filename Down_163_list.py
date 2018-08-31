@@ -1,9 +1,6 @@
 import requests
-import re
 import json
-import os
-import time
-from random import choice
+from requests import RequestException
 
 url = "https://music.163.com/weapi/v3/playlist/detail"
 header = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'}
@@ -33,7 +30,4 @@ def getSongList():
         item['name']=track.get('name')
         item['singer']=track.get('ar')[0]['name']
         name_list.append(item)
-        print(item)
-
-
-getSongList()
+    return name_list

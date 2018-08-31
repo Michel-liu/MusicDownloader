@@ -17,6 +17,8 @@ def download_163_music():
     for item in dict_list:
         song_list=[]
         temp=search_song(item['name'])
+        if len(temp) <= 0:
+            continue
         song_list.append(temp[0])
         add_vkey=get_vkey(song_list)
         s_u_l=get_music_url(add_vkey)

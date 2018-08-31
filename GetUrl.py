@@ -1,10 +1,13 @@
 import requests
-import os
 from random import random
 from time import time
 import json
+from pyfiglet import Figlet
+import downloader
 
-def menu(self):
+def menu():
+    f = Figlet()
+    print(f.renderText("CoolMusic"))
     print("0. 一键下载网易云音乐我喜欢歌单")
     print("1. 手动搜索并下载音乐")
     cho = input("请选择你想要的操作：")
@@ -23,7 +26,7 @@ def searchanddownload():
     SaveFile(s_u_l)
 
 
-def search_song(self, key_word, page=1, num=20):
+def search_song(key_word, page=1, num=20):
         ''' 根据关键词查找歌曲 '''
         url = 'https://c.y.qq.com/soso/fcgi-bin/client_search_cp'
         url += '?new_json=1&aggr=1&cr=1&flag_qc=0&p=%d&n=%d&w=%s' \
@@ -48,8 +51,8 @@ def search_song(self, key_word, page=1, num=20):
 def choose_music(song_list):
     index = 0
     for song in song_list:
-        print(index+'. ', song['title']+" ", song['singer']+" ", song['album'])
-        index++
+        print(str(index)+".", song['title'], ' / '.join(map(lambda x: x['name'],song['singer'])), song['album']['name'],sep=" ")
+        index += 1
     s = input("请选择你想要下载的音乐（多选请用空格隔开）：")
     choose = str(s).split(' ')
     res = []
@@ -74,7 +77,7 @@ def get_music_url(song_list_vkey):
     song_url_list=[]
     for item in song_list_vkey:
         url = 'http://dl.stream.qqmusic.qq.com/%s?' % item['filename']
-        music_url = url + 'vkxey=%s&guid=%s&fromtag=30' % (item['vkey'], item['guid'])
+        music_url = url + 'vkey=%s&guid=%s&fromtag=30' % (item['vkey'], item['guid'])
         item['music_url']=music_url
         song_url_list.append(item)
     return song_url_list
@@ -82,4 +85,9 @@ def get_music_url(song_list_vkey):
 def SaveFile(song_url_list):
     with open('index.txt','w+') as f:
         for item in song_url_list:
-            f.write(item['title']+'_'+item['singer']+'|'+item['music_url'])
+            f.write(item['title']+'_'+'_'.join(map(lambda x: x['name'],item['singer']))+'|'+item['music_url'])
+            f.write('\n')
+
+if __name__ == '__main__':
+    menu()
+    downloader.main()

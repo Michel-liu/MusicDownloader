@@ -3,7 +3,7 @@
 import os
 import requests
 
-fileSaveDir = '/Users/sun/Music/cocomusic/'
+fileSaveDir = '/Users/liuhuan/Music/'
 
 def get_index():
     info={}
@@ -39,6 +39,7 @@ def downloader(dict):
     try:
         for key,value in dict.items():
             response=requests.get(value[:-1],headers=headers)
+            print(value[:-1])
             print(key+':'+str(response.status_code))
             with open(fileSaveDir + key+'.mp3','wb') as f1:
                 f1.write(response.content)

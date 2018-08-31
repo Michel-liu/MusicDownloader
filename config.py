@@ -1,6 +1,6 @@
 # encoding = 'utf-8
 
-FileSaveDir = "/Users/liuhuan/Music/"
+FileSaveDir = "/Users/sun/Music/cocomusic/"
 
 headers={
         'Accept':'*/*',

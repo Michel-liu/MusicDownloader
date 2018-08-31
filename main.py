@@ -1,6 +1,6 @@
 # encode = 'utf-8'
 
-from GetUrl import searchanddownload
+from GetUrl import searchanddownload,download_163_music
 from pyfiglet import Figlet
 
 
@@ -11,7 +11,7 @@ def menu():
     print("1. 手动搜索并下载音乐")
     cho = input("请选择你想要的操作：")
     if cho == "0":
-        pass
+        download_163_music()
     if cho == "1":
         searchanddownload()
 

@@ -1,7 +1,8 @@
-# encode = 'utf-8'
+# -*- coding: UTF-8 -*-
 
 from GetUrl import searchanddownload,download_163_music
 from pyfiglet import Figlet
+import readline
 
 
 def menu():

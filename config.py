@@ -1,6 +1,6 @@
 # encoding = 'utf-8
 
-FileSaveDir = "/Users/liuhuan/Music/"
+FileSaveDir = "/Users/sun/Music/cocomusic/"
 
 headers={
         'Accept':'*/*',
@@ -15,6 +15,6 @@ headers={
     }
 
 formdata = {
-    'params':'2c3K2FobUFrM5zGukysRkIQ3qOpLog0v+bKbhAebzoVonBIoAbfGQk+7t3gTOR0N5lYzrY3e4c43sVQxsKFdZ7dvV9/XWMcNvZXRc/uZ8lIuzDgWfr2iIpG9pQMB++HPp+850j7uRD0zSOQ+/gFYt7CL7WPMA6dNyLnc0NbePcNaSSQo8HYhnjYpOV4IlNFIiiyBPJCBtpRDG3Gi6KWibn3ZQQclKBuuuOR7CMxIjU8=',
-    'encSecKey':'9703d1659c2a80b3a15de6225a26bd2862655c5949f864922f36e15e0a0f23b1ba0d814cc3d464342cb211a498ccc8072eccc44bbb239fb93f9ddbab979a4da27a9e3a33e7b4547b7d0870f6bd3da05939d222aefbe02eb70fe8dc000acae9ab4c9ee3fe6c26563665b0b0f2e6eab860a854deea1d7479eb30d5f5859571abf3'
+    'params':'dSQsqV+TuULVOUZGkopDh8Za8wCcII2nCcg2sill4q58l5xwndAXs72hledD9mFgz9roAGncGOv9zXfUSKha7/r42tcgC+/eA30FWOW8wy7PTZv1WBBEY4cEyiKTcgb5hG39aCHXC7POCtQPSYOaWaq4y/ND2bE3H4TtTHMH++ibb7nRQ0NR33PK9p5LoEGnGYw9W3pOXpdH5GiizTrCkL78g9xWAhGRmM4sYMhVF8A=',
+    'encSecKey':'74e98f4fbed980b87892f8ca55b757d6d4e59fe96468f7ab9616ec7059ff1e27d565838206b26e264f518418fe067b2048c3192cd4595f59203c9bccb9c2eec266e6a82adaece6330226d0f9df5e5763e2f220bb47db45642c17fbda8756dda0c8ca503a049cec570b89baa1b07b677485ba2ef527c30bbbba6001e1bdeb2c1b'
 }

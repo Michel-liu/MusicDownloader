@@ -15,7 +15,7 @@ MusicDownloader 是基于python的一个音乐下载项目。
 
    ![](https://ws4.sinaimg.cn/large/0069RVTdly1futyxrnrr9j30y60jy43c.jpg)
 
-2. 在当前界面进入开发者工具，进入**网络**选项卡，并重新加载界面。
+2. 在当前界面进入开发者工具，进入**网络**选项卡，并重新加载界面。
 
    ![](https://ws3.sinaimg.cn/large/0069RVTdly1futyyml8r8j319g0pdwoz.jpg)
 

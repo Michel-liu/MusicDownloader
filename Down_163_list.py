@@ -27,6 +27,4 @@ def getSongList():
         item['name']=track.get('name')
         item['singer']=track.get('ar')[0]['name']
         name_list.append(item)
-
-
     return name_list
